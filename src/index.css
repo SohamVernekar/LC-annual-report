@@ -1,0 +1,127 @@
+:root {
+  --lc-blue: #1268b3;
+  --lc-yellow: #ffce00;
+  --lc-gold: #e8bb06;
+  --brand-yellow: #ffc400;
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --lc-black: #000000;
+  --lc-white: #ffffff;
+  --lc-gray-900: #101010;
+  --lc-gray-800: #202020;
+  --lc-gray-700: #404042;
+  --lc-gray-600: #57585b;
+  --lc-gray-500: #6b6c6e;
+  --lc-gray-300: #bdbdbd;
+  --lc-gray-200: #d9d9d9;
+  --lc-gray-100: #f1f1f1;
+  --lc-cream: #f6f3ad;
+  --lc-cream-soft: #fff8e5;
+  --font-primary: 'Roboto', Arial, Helvetica, sans-serif;
+  --font-display: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
+
+  /* Semantic accents — the single source of truth for brand color usage.
+     Every yellow/blue in the report resolves to one of these so the palette
+     stays cohesive across all seven chapters. */
+  --accent: #ffc400;
+  --card-yellow: #ffd24a;
+  --brand-blue: #1268b3;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  /* Named spacing scale (shared across all sections) */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-2xl: 96px;
+  --space-section: clamp(48px, 8vw, 120px);
+  --content-max: 1280px;
+  --content-gutter: clamp(18px, 5vw, 64px);
+  --shadow-card: 0 12px 32px rgba(0, 0, 0, .16);
+
+  /* Cohesive elevation scale — soft, low-alpha, consistent across chapters.
+     Resting cards sit nearly flat; hover raises one step. */
+  --shadow-xs: 0 1px 2px rgba(16, 24, 40, .05);
+  --shadow-sm: 0 1px 3px rgba(16, 24, 40, .08), 0 1px 2px rgba(16, 24, 40, .05);
+  --shadow-md: 0 4px 6px -2px rgba(16, 24, 40, .06), 0 2px 4px -2px rgba(16, 24, 40, .04);
+  --shadow-lg: 0 12px 16px -4px rgba(16, 24, 40, .1), 0 4px 6px -2px rgba(16, 24, 40, .03);
+  --shadow-xl: 0 24px 28px -6px rgba(16, 24, 40, .12), 0 8px 10px -4px rgba(16, 24, 40, .04);
+
+  --z-header: 20;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body, #root {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+  font-family: var(--font-primary);
+}
+
+body {
+  background: var(--lc-cream-soft, #fffdf5);
+  color: var(--lc-gray-900);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Display type: Poppins for headings, Roboto for everything else. */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: var(--accent);
+  color: #101010;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+* { box-sizing: border-box; }
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Shared global content grid: one consistent container for every section */
+.content-grid {
+  width: 100%;
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--content-gutter);
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--grid-gap, var(--space-md));
+}
