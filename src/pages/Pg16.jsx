@@ -1,8 +1,8 @@
 import React from 'react';
-import asset16_0 from '../assets/pg16/bg-16.png';
-import asset16_1 from '../assets/pg16/conference.jpg';
-import asset16_2 from '../assets/pg16/prize.jpg';
-import asset16_3 from '../assets/pg16/solar.jpg';
+import asset16_0 from '../assets/pg16/bg-16.webp';
+import asset16_1 from '../assets/pg16/conference.webp';
+import asset16_2 from '../assets/pg16/prize.webp';
+import asset16_3 from '../assets/pg16/solar.webp';
 
 function Pg16() {
   return (

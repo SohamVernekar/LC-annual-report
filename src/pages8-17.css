@@ -520,8 +520,8 @@
   z-index: 0;
   pointer-events: none;
   background: linear-gradient(135deg, rgba(18, 104, 179, 0.24) 0%, rgba(18, 104, 179, 0.10) 100%);
-  -webkit-mask-image: url('./assets/brand-mark.png');
-  mask-image: url('./assets/brand-mark.png');
+  -webkit-mask-image: url('./assets/brand-mark.webp');
+  mask-image: url('./assets/brand-mark.webp');
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center bottom;

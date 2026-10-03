@@ -1,19 +1,19 @@
 import React from 'react'
 
-import asset10_0 from '../assets/pg10/anupam agarwal.png';
-import asset10_1 from '../assets/pg10/basant seth.png';
-import asset10_2 from '../assets/pg10/bg10.png';
-import asset10_3 from '../assets/pg10/dinesh kumar mithal.png';
-import asset10_4 from '../assets/pg10/gaurav lohia.png';
-import asset10_5 from '../assets/pg10/gaurav swaroop.png';
-import asset10_6 from '../assets/pg10/keith reddy padmaja reddy.png';
-import asset10_7 from '../assets/pg10/naresh kumar gupta.png';
-import asset10_8 from '../assets/pg10/paritosh kumar mukherjee.png';
-import asset10_9 from '../assets/pg10/potrait bg.png';
-import asset10_10 from '../assets/pg10/raj kumar lohia.png';
-import asset10_11 from '../assets/pg10/rajendra kumar arya.png';
-import asset10_12 from '../assets/pg10/shikha srivastava.png';
-import asset10_13 from '../assets/pg10/ujjal de.png';
+import asset10_0 from '../assets/pg10/anupam agarwal.webp';
+import asset10_1 from '../assets/pg10/basant seth.webp';
+import asset10_2 from '../assets/pg10/bg10.webp';
+import asset10_3 from '../assets/pg10/dinesh kumar mithal.webp';
+import asset10_4 from '../assets/pg10/gaurav lohia.webp';
+import asset10_5 from '../assets/pg10/gaurav swaroop.webp';
+import asset10_6 from '../assets/pg10/keith reddy padmaja reddy.webp';
+import asset10_7 from '../assets/pg10/naresh kumar gupta.webp';
+import asset10_8 from '../assets/pg10/paritosh kumar mukherjee.webp';
+import asset10_9 from '../assets/pg10/potrait bg.webp';
+import asset10_10 from '../assets/pg10/raj kumar lohia.webp';
+import asset10_11 from '../assets/pg10/rajendra kumar arya.webp';
+import asset10_12 from '../assets/pg10/shikha srivastava.webp';
+import asset10_13 from '../assets/pg10/ujjal de.webp';
 
 const committeeNames = {
   yellow: 'Audit Committee',

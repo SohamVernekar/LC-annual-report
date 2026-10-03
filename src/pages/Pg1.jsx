@@ -1,5 +1,5 @@
-import pg1Bg from '../assets/pg1/background.png'
-import pg1Fg from '../assets/pg1/foreground.png'
+import pg1Bg from '../assets/pg1/background.webp'
+import pg1Fg from '../assets/pg1/foreground.webp'
 
 function Pg1() {
   return (

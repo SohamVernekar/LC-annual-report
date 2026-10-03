@@ -1,6 +1,6 @@
 import React from "react";
-import asset9_0 from "../assets/pg9/bg9.png";
-import asset9_1 from "../assets/pg9/founder.png";
+import asset9_0 from "../assets/pg9/bg9.webp";
+import asset9_1 from "../assets/pg9/founder.webp";
 
 function Pg9() {
   return (

@@ -1,9 +1,9 @@
-import agrotex from '../assets/pg6/01_Agrotex.png'
-import buildtex from '../assets/pg6/02_Buildtex.png'
-import geotex from '../assets/pg6/03_Geotex.png'
-import packtex from '../assets/pg6/04_Packtex.png'
-import special from '../assets/pg6/05_Special_Applications.png'
-import machinery from '../assets/pg6/machinery.png'
+import agrotex from '../assets/pg6/01_Agrotex.webp'
+import buildtex from '../assets/pg6/02_Buildtex.webp'
+import geotex from '../assets/pg6/03_Geotex.webp'
+import packtex from '../assets/pg6/04_Packtex.webp'
+import special from '../assets/pg6/05_Special_Applications.webp'
+import machinery from '../assets/pg6/machinery.webp'
 
 function Pg6() {
   return (

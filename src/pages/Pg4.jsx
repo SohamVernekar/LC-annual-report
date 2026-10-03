@@ -1,4 +1,4 @@
-import bgImage from '../assets/pg4/bg-image.png'
+import bgImage from '../assets/pg4/bg-image.webp'
 
 function Pg4() {
   return (

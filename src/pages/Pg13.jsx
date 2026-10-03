@@ -1,5 +1,5 @@
 import React from "react";
-import asset13_0 from '../assets/pg13/bg-13.png';
+import asset13_0 from '../assets/pg13/bg-13.webp';
 
 const roadmap = [
   {

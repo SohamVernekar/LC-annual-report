@@ -1,6 +1,6 @@
 import React from 'react'
-import logoBlack from '../assets/pg3/logo-black-crop.png'
-import logoWhite from '../assets/pg4/logo-white.png'
+import logoBlack from '../assets/pg3/logo-black-crop.webp'
+import logoWhite from '../assets/pg4/logo-white.webp'
 
 /* Sections whose backdrop is dark enough to need the white wordmark. */
 const DARK_SECTIONS = [

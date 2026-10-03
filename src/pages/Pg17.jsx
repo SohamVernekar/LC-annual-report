@@ -1,7 +1,7 @@
 import React from 'react';
-import asset17_0 from '../assets/pg17/award.jpg';
-import asset17_1 from '../assets/pg17/hands.jpg';
-import asset17_2 from '../assets/pg17/page17-bg.png';
+import asset17_0 from '../assets/pg17/award.webp';
+import asset17_1 from '../assets/pg17/hands.webp';
+import asset17_2 from '../assets/pg17/page17-bg.webp';
 
 const stakeholdersData = [
   {

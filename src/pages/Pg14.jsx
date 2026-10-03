@@ -1,5 +1,5 @@
 import React from 'react';
-import asset14_0 from '../assets/pg14/bg-14.png';
+import asset14_0 from '../assets/pg14/bg-14.webp';
 
 const services = [
   {

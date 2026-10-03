@@ -1,7 +1,7 @@
 import React from "react";
-import asset11_0 from '../assets/pg11/lohia-logo.png';
-import asset11_1 from '../assets/pg11/machine.png';
-import asset11_2 from '../assets/pg11/training-centre.jpg';
+import asset11_0 from '../assets/pg11/lohia-logo.webp';
+import asset11_1 from '../assets/pg11/machine.webp';
+import asset11_2 from '../assets/pg11/training-centre.webp';
 
 const LeftIntro = () => (
   <section className="left-col">

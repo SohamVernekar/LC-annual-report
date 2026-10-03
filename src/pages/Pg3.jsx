@@ -1,4 +1,4 @@
-import factoryImg from '../assets/pg3/factory.png'
+import factoryImg from '../assets/pg3/factory.webp'
 
 function Pg3() {
   return (

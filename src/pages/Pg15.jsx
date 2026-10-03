@@ -1,7 +1,7 @@
 import React from 'react';
-import asset15_0 from '../assets/pg15/bp.png';
-import asset15_1 from '../assets/pg15/earth.jpg';
-import asset15_2 from '../assets/pg15/tp.png';
+import asset15_0 from '../assets/pg15/bp.webp';
+import asset15_1 from '../assets/pg15/earth.webp';
+import asset15_2 from '../assets/pg15/tp.webp';
 
 function Pg15() {
   return (

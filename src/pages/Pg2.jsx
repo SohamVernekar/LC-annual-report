@@ -1,4 +1,4 @@
-import machineArt from '../assets/pg2/foreground.png'
+import machineArt from '../assets/pg2/foreground.webp'
 
 function Pg2() {
   return (

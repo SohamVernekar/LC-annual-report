@@ -1,6 +1,6 @@
 import React from "react";
-import asset8_0 from "../assets/pg8/bg8.jpg";
-import asset8_1 from "../assets/pg8/page8-symbol.png";
+import asset8_0 from "../assets/pg8/bg8.webp";
+import asset8_1 from "../assets/pg8/page8-symbol.webp";
 
 const Pg8 = () => {
   return (

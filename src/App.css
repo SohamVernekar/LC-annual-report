@@ -109,8 +109,8 @@ img {
 .page-five .card-icon,
 .page-four .milestone li::before {
   background-color: var(--brand-yellow);
-  -webkit-mask-image: url('./assets/brand-mark.png');
-  mask-image: url('./assets/brand-mark.png');
+  -webkit-mask-image: url('./assets/brand-mark.webp');
+  mask-image: url('./assets/brand-mark.webp');
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;

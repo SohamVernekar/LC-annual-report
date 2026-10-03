@@ -1,5 +1,5 @@
 import React from "react";
-import asset12_0 from '../assets/pg12/bg-12.png';
+import asset12_0 from '../assets/pg12/bg-12.webp';
 
 const stats = [
   { number: "~60", label: "Patents Granted in India" },

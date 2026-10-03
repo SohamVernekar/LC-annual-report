@@ -1,4 +1,4 @@
-import worldMap from '../assets/pg7/world-map-base.png'
+import worldMap from '../assets/pg7/world-map-base.webp'
 
 function Pg7() {
 

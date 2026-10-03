@@ -1,12 +1,12 @@
-import machine01 from '../assets/pg5/machine-01.png'
-import machine02 from '../assets/pg5/machine-02.jpg'
-import machine03 from '../assets/pg5/machine-03.png'
-import machine04 from '../assets/pg5/machine-04.png'
-import machine05 from '../assets/pg5/machine-05.png'
-import machine06 from '../assets/pg5/machine-06.png'
-import machine07 from '../assets/pg5/machine-07.png'
-import machine08 from '../assets/pg5/machine-08.png'
-import machine09 from '../assets/pg5/reclamax-65.png'
+import machine01 from '../assets/pg5/machine-01.webp'
+import machine02 from '../assets/pg5/machine-02.webp'
+import machine03 from '../assets/pg5/machine-03.webp'
+import machine04 from '../assets/pg5/machine-04.webp'
+import machine05 from '../assets/pg5/machine-05.webp'
+import machine06 from '../assets/pg5/machine-06.webp'
+import machine07 from '../assets/pg5/machine-07.webp'
+import machine08 from '../assets/pg5/machine-08.webp'
+import machine09 from '../assets/pg5/reclamax-65.webp'
 
 function Pg5() {
   return (
