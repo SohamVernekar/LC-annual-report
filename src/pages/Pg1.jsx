@@ -19,6 +19,10 @@ function Pg1() {
           </h1>
           <div className="cover-page__rule" />
           <p>Annual Report 2024–25</p>
+          <p className="cover-page__subtitle">
+            Integrated machinery for woven technical textiles &mdash; engineering
+            reliability for customers in around 100 countries.
+          </p>
         </section>
       </div>
     </main>

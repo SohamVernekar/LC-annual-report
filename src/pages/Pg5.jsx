@@ -6,6 +6,7 @@ import machine05 from '../assets/pg5/machine-05.png'
 import machine06 from '../assets/pg5/machine-06.png'
 import machine07 from '../assets/pg5/machine-07.png'
 import machine08 from '../assets/pg5/machine-08.png'
+import machine09 from '../assets/pg5/reclamax-65.png'
 
 function Pg5() {
   return (
@@ -85,6 +86,9 @@ function Pg5() {
             <figure><img src={machine06} alt="Lohia Corp extrusion machinery" loading="lazy" decoding="async" /></figure>
             <figure><img src={machine07} alt="Lohia Corp ReclaPro machinery" loading="lazy" decoding="async" /></figure>
             <figure><img src={machine08} alt="Lohia Corp industrial machinery" loading="lazy" decoding="async" /></figure>
+          </div>
+          <div className="machine-large">
+            <figure><img src={machine09} alt="Lohia Corp ReclaMax machinery" loading="lazy" decoding="async" /></figure>
           </div>
         </section>
       </section>

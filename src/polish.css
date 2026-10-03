@@ -1,0 +1,1232 @@
+/* ================================================================
+   PITCH POLISH LAYER — additive only.
+   Original stylesheets (lohia-brand.css / index.css / App.css)
+   are untouched. Radius capped at 12px. Alignment unified.
+   Solid brand palette only — no transparent / glass finishes.
+   Brand tokens: #1268B3 blue, #FFCE00 yellow, #E8BB06 gold,
+   #FFFFFF white, #101010 black, #F1F1F1 / #D9D9D9 grays,
+   #FFF8E5 cream-soft.
+   ================================================================ */
+
+:root {
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 12px;
+  --radius-xl: 12px;
+  --radius-pill: 12px;
+  --pitch-gutter: clamp(20px, 4.2vw, 64px);
+  --pitch-gutter-wide: clamp(20px, 4.2vw, 64px);
+  --pitch-line: #D9D9D9;
+  --pitch-navy: #083A75;
+  --pitch-navy-deep: #061F42;
+}
+
+/* ---------- Global pitch rhythm ---------- */
+.annual-report {
+  background: #FFF8E5;
+}
+
+.report-section {
+  scroll-margin-top: 0;
+}
+
+/* Unified eyebrow — solid white pill, brand blue text */
+.eyebrow,
+.section-label,
+.page-six .kicker,
+.page-five .intro .eyebrow,
+.page-four .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 12px !important;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: 12px;
+  border: 1px solid #E8BB06;
+  background: #FFFFFF;
+  color: #1268B3 !important;
+  margin-bottom: 16px !important;
+  line-height: 1 !important;
+}
+
+.page-four .eyebrow {
+  background: #FFFFFF;
+  border-color: #FFCE00;
+  color: #1268B3 !important;
+}
+
+/* Tighter, more confident headings */
+.cover-page__title-block h1,
+.page-two .intro h1,
+.page-three .page-title h1,
+.page-four h1,
+.page-five .intro h1,
+.page-six h1,
+.page-seven .kicker {
+  text-wrap: balance;
+  letter-spacing: -0.035em !important;
+}
+
+/* ---------- Pitch nav — solid, aligned to logo baseline ---------- */
+.pitch-nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  pointer-events: none;
+}
+
+.pitch-progress {
+  height: 3px;
+  background: #D9D9D9;
+}
+
+.pitch-progress span {
+  display: block;
+  height: 100%;
+  background: #1268B3;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}
+
+.pitch-nav__inner {
+  pointer-events: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 12px var(--pitch-gutter) 0 200px;
+}
+
+.pitch-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 12px;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  box-shadow: var(--shadow-md);
+}
+
+.pitch-nav.is-dark .pitch-nav__links {
+  background: #101010;
+  border-color: #FFCE00;
+}
+
+.pitch-nav__links a {
+  text-decoration: none;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #404042;
+  padding: 8px 12px;
+  border-radius: 12px;
+  line-height: 1;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.pitch-nav.is-dark .pitch-nav__links a {
+  color: #FFFFFF;
+}
+
+.pitch-nav__links a:hover {
+  background: #F1F1F1;
+}
+
+.pitch-nav__links a.is-active {
+  background: #101010;
+  color: #FFFFFF;
+}
+
+.pitch-nav.is-dark .pitch-nav__links a.is-active {
+  background: #FFCE00;
+  color: #101010;
+}
+
+.pitch-nav__cta {
+  text-decoration: none;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #101010;
+  background: #FFCE00;
+  border: 1px solid #E8BB06;
+  border-radius: 12px;
+  padding: 10px 16px;
+  box-shadow: var(--shadow-md);
+  transition: translate 0.25s ease, box-shadow 0.25s ease;
+  white-space: nowrap;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.pitch-nav__cta:hover {
+  translate: 0 -1px;
+  box-shadow: var(--shadow-lg);
+}
+
+/* ---------- Cover ---------- */
+.cover-page__title-block {
+  z-index: 2;
+}
+
+.pitch-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #101010;
+  background: #FFCE00;
+  border: 1px solid #E8BB06;
+  border-radius: 12px;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-md);
+}
+
+.pitch-badge i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #1268B3;
+  border: 2px solid #FFFFFF;
+  font-style: normal;
+}
+
+.cover-page__subtitle {
+  margin: 14px 0 0 !important;
+  max-width: 44ch;
+  font-size: clamp(14px, 1.25vw, 18px) !important;
+  line-height: 1.55 !important;
+  color: #FFFFFF !important;
+  font-weight: 400 !important;
+  text-align: left;
+}
+
+.pitch-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  transition: translate 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  line-height: 1;
+}
+
+.pitch-btn--solid {
+  background: #FFCE00;
+  border: 1px solid #E8BB06;
+  color: #101010;
+  box-shadow: var(--shadow-md);
+}
+
+.pitch-btn--solid:hover {
+  translate: 0 -2px;
+  box-shadow: var(--shadow-lg);
+}
+
+.pitch-btn--ghost {
+  color: #101010;
+  border: 1px solid #D9D9D9;
+  background: #FFFFFF;
+}
+
+.pitch-btn--ghost:hover {
+  background: #F1F1F1;
+  translate: 0 -2px;
+}
+
+/* Cover credibility strip — solid navy cards, yellow border */
+.cover-meta {
+  position: absolute;
+  z-index: 2;
+  left: 7.8%;
+  right: auto;
+  bottom: clamp(18px, 4vh, 44px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  width: min(760px, calc(100% - 7.8% - 120px));
+  align-items: stretch;
+}
+
+.cover-meta div {
+  background: #083A75;
+  border: 1px solid #FFCE00;
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.cover-meta strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(17px, 1.7vw, 25px);
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
+.cover-meta span {
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #FFCE00;
+}
+
+.cover-scroll {
+  position: absolute;
+  z-index: 2;
+  right: clamp(18px, 4vw, 52px);
+  bottom: clamp(20px, 4.5vh, 46px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFFFFF;
+  font-size: 11.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.cover-scroll em {
+  width: 30px;
+  height: 46px;
+  border: 1.5px solid #FFFFFF;
+  border-radius: 12px;
+  display: grid;
+  place-items: start center;
+  padding-top: 8px;
+  font-style: normal;
+  background: #083A75;
+}
+
+.cover-scroll em::after {
+  content: "";
+  width: 4px;
+  height: 9px;
+  border-radius: 4px;
+  background: #FFCE00;
+  animation: pitchWheel 1.8s ease-in-out infinite;
+}
+
+@keyframes pitchWheel {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(12px); opacity: 0.4; }
+}
+
+/* ---------- Theme / highlights — solid white + cream ---------- */
+.page-two .intro .lead {
+  font-size: clamp(15px, 1.15vw, 18px) !important;
+  color: #101010;
+  border-left: 3px solid #FFCE00;
+  padding-left: 14px;
+  text-align: left;
+}
+
+.highlights {
+  border: 1px solid #D9D9D9 !important;
+  background: #FFFFFF !important;
+  box-shadow: var(--shadow-lg) !important;
+  border-radius: 12px !important;
+}
+
+.metric {
+  padding: 12px 12px;
+  border-radius: 12px;
+  background: #FFF8E5;
+  border: 1px solid #E8BB06;
+  white-space: normal !important;
+  text-align: left;
+}
+
+.metric strong {
+  font-variant-numeric: tabular-nums;
+  color: #1268B3;
+}
+
+/* ---------- Cards: solid brand fills ---------- */
+.info-card,
+.page-five .feature-card,
+.yellow-card,
+.page-seven .location-box,
+.page-seven .disclaimer,
+.page-four .note {
+  border: 1px solid #D9D9D9 !important;
+  box-shadow: var(--shadow-md) !important;
+  border-radius: 12px !important;
+}
+
+.info-card {
+  background: #FFFFFF !important;
+}
+
+.info-card h2,
+.defines h2,
+.page-five .portfolio-copy h2,
+.page-six .portfolio h2,
+.page-seven .presence h2 {
+  letter-spacing: -0.03em;
+}
+
+.info-card p,
+.defines-intro,
+.page-five .body-copy,
+.page-five .portfolio-copy p {
+  text-align: left !important;
+}
+
+.page-five .feature-card,
+.yellow-card {
+  background: #FFCE00 !important;
+  border-color: #E8BB06 !important;
+}
+
+/* Portfolio machine thumbs — solid frame, no overlay wash */
+.page-five .machine-grid figure,
+.page-five .machine-large figure {
+  border: 1px solid rgba(255, 206, 0, 0.4);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  border-radius: 12px !important;
+  overflow: hidden;
+  background: #fcf4d9;
+}
+
+.page-five .machine-grid figure::after,
+.page-five .machine-large figure::after {
+  content: none;
+}
+
+/* Applications: outer 12px, inner seam perfectly aligned */
+.page-six .app {
+  border-radius: 12px !important;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+}
+
+.page-six .app .photo {
+  border-radius: 0 !important;
+  overflow: hidden;
+  background: #F1F1F1;
+}
+
+.page-six .app .box {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  margin: 0 !important;
+  align-self: stretch;
+  background: #FFFFFF;
+}
+
+.page-six .app .box h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1268B3;
+}
+
+.page-six .app .box h3::before {
+  content: "";
+  width: 22px;
+  height: 3px;
+  border-radius: 3px;
+  background: #FFCE00;
+  flex: 0 0 auto;
+}
+
+/* Journey note — solid navy */
+.page-four .note {
+  background: #083A75 !important;
+  border: 2px solid #FFCE00 !important;
+  box-shadow: var(--shadow-lg);
+  text-align: left;
+  color: #FFFFFF;
+}
+
+/* Overview hero: cap at 12px, align to grid */
+.page-three .hero-photo {
+  border-radius: 12px !important;
+}
+
+/* Map + footer — solid */
+.page-seven .map-viewport {
+  border: 1px solid #D9D9D9;
+  box-shadow: var(--shadow-lg);
+  background: #FFFFFF;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.pitch-footer {
+  background: #083A75;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid #FFCE00;
+}
+
+.pitch-footer::before {
+  content: none;
+}
+
+.pitch-footer__inner {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(48px, 6vw, 88px) var(--pitch-gutter) 30px;
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: clamp(28px, 4vw, 72px);
+  align-items: start;
+  text-align: left;
+}
+
+.pitch-footer__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #101010;
+  background: #FFCE00;
+  border: 1px solid #E8BB06;
+  padding: 7px 12px;
+  border-radius: 12px;
+  margin: 0 0 18px;
+}
+
+.pitch-footer h2 {
+  margin: 0 0 14px;
+  font-size: clamp(28px, 3vw, 46px);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.pitch-footer h2 span {
+  color: #FFCE00;
+  font-weight: 700;
+}
+
+.pitch-footer__copy {
+  margin: 0 0 24px;
+  max-width: 58ch;
+  color: #FFFFFF;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.pitch-footer__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.pitch-footer__actions .pitch-btn--ghost {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #101010;
+}
+
+.pitch-footer__meta {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  padding-top: 8px;
+}
+
+.pitch-footer__meta div {
+  border: 1px solid #FFCE00;
+  background: #061F42;
+  border-radius: 12px;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.pitch-footer__meta h3 {
+  margin: 0 0 4px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FFCE00;
+}
+
+.pitch-footer__meta p {
+  margin: 0;
+  font-size: 14.5px;
+  color: #FFFFFF;
+}
+
+.pitch-footer__bar {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 18px var(--pitch-gutter) 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-top: 1px solid #FFCE00;
+  font-size: 12.5px;
+  color: #F1F1F1;
+  text-align: left;
+}
+
+/* ================================================================
+   RADIUS CAP — nothing (except functional dots) exceeds 12px
+   ================================================================ */
+.highlights,
+.info-card,
+.who-card,
+.what-card,
+.value-card,
+.yellow-card,
+.page-five .feature-card,
+.page-five .machine-grid figure,
+.page-six .app,
+.page-seven .location-box,
+.page-seven .disclaimer,
+.page-seven .map-viewport,
+.page-four .note,
+.cover-meta div,
+.metric,
+.pitch-nav__links,
+.pitch-nav__links a,
+.pitch-nav__cta,
+.pitch-badge,
+.pitch-btn,
+.pitch-footer__eyebrow,
+.pitch-footer__meta div,
+.eyebrow,
+.section-label,
+.page-six .kicker {
+  border-radius: 12px !important;
+}
+
+/* Functional circles stay circular — not counted as cards */
+.page-four .milestone .dot,
+.page-seven .marker.blue,
+.page-seven .marker.green::after,
+.page-seven .pin-icon::after,
+.pitch-badge i {
+  border-radius: 50% !important;
+}
+.page-seven .marker.green,
+.page-seven .pin-icon {
+  border-radius: 50% 50% 50% 0 !important;
+}
+.cover-scroll em::after {
+  border-radius: 4px !important;
+}
+
+/* ================================================================
+   ALIGNMENT UNIFICATION — one gutter, straight edges
+   ================================================================ */
+.page-five .spread {
+  padding-left: var(--pitch-gutter-wide) !important;
+  padding-right: var(--pitch-gutter-wide) !important;
+  gap: clamp(24px, 4vw, 64px) !important;
+  align-items: start !important;
+}
+
+.page-five .left-column,
+.page-five .right-column {
+  min-width: 0;
+  text-align: left;
+}
+
+.page-five .feature-grid {
+  align-items: stretch !important;
+}
+
+.page-six .content {
+  padding-left: var(--pitch-gutter-wide) !important;
+  padding-right: var(--pitch-gutter-wide) !important;
+  align-items: start !important;
+}
+
+.page-six .left,
+.page-six .right {
+  min-width: 0;
+  text-align: left;
+}
+
+.page-six .application-list {
+  align-items: stretch !important;
+}
+
+.page-seven .hero-grid,
+.page-seven .info-grid {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.page-seven {
+  padding-left: var(--pitch-gutter-wide) !important;
+  padding-right: var(--pitch-gutter-wide) !important;
+}
+
+.page-seven .hero-grid {
+  align-items: start !important;
+  text-align: left;
+}
+
+.page-seven .map-section {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 1400px;
+}
+
+/* ================================================================
+   RESPONSIVE SYSTEM — mobile-first safeguards + desktop refinement
+   Solid brand only. No transparency. 12px max radius preserved.
+   Breakpoints: ≤640 phone, 641–1024 tablet, ≥1025 desktop.
+   ================================================================ */
+
+/* Base safeguards — prevent horizontal scroll everywhere */
+html, body {
+  overflow-x: clip;
+}
+.annual-app, .annual-report, .report-section {
+  min-width: 0;
+  overflow-x: clip;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1, h2, h3, p {
+  overflow-wrap: break-word;
+}
+.report-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+#cover { content-visibility: visible; }
+
+/* Desktop refinement ≥1025px */
+@media (min-width: 1025px) {
+  :root {
+    --pitch-gutter: clamp(32px, 4.2vw, 64px);
+  }
+  .report-section > .cover-page,
+  .report-section > .page-two,
+  .report-section > .page-three,
+  .report-section > .page-four,
+  .report-section > .page-five,
+  .report-section > .page-six,
+  .report-section > .page-seven {
+    max-width: none;
+    margin-inline: auto;
+  }
+  /* Guard against short viewports crowding absolute chapters */
+  .report-section > .page-two {
+    min-height: 860px;
+  }
+  .page-five .machine-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+  .page-five .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .page-five .machine-grid figure {
+    aspect-ratio: 4 / 3;
+  }
+  .page-five .machine-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .page-six .app .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .page-six .app {
+    min-height: 0;
+  }
+  .page-six .app .photo {
+    min-height: 180px;
+  }
+  .page-seven .country-list {
+    column-count: 2;
+    column-gap: 32px;
+  }
+}
+
+/* Laptop band 641–1100px — CTA off, nav stays usable */
+@media (min-width: 641px) and (max-width: 1100px) {
+  .pitch-nav__inner {
+    padding-left: 170px;
+    padding-right: 20px;
+  }
+  .pitch-nav__cta { display: none; }
+  .pitch-nav__links {
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .pitch-nav__links::-webkit-scrollbar { display: none; }
+  .page-five .spread {
+    grid-template-columns: 1fr !important;
+  }
+  .page-five .machine-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+  .page-six .content {
+    grid-template-columns: 1fr !important;
+  }
+  .page-six .machine img {
+    max-width: 720px;
+    margin-inline: auto;
+  }
+  .page-seven .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+}
+
+/* Tablet + phone ≤900px */
+@media (max-width: 900px) {
+  .pitch-nav__inner {
+    padding: 10px 16px 0 132px;
+    gap: 8px;
+    min-height: 40px;
+  }
+  .pitch-nav__links {
+    overflow-x: auto;
+    max-width: 100%;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .pitch-nav__links::-webkit-scrollbar { display: none; }
+  .pitch-nav__links a {
+    flex: 0 0 auto;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .pitch-nav__cta { display: none; }
+
+  /* Cover becomes flow layout — no absolute collisions */
+  .report-section > .cover-page {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+  }
+  .cover-page__background,
+  .cover-page__foreground {
+    object-fit: cover;
+    object-position: center;
+  }
+  .cover-page__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 18px;
+    min-height: 100svh;
+    padding: 96px 20px 24px;
+  }
+  .cover-page__title-block {
+    position: static !important;
+    width: auto !important;
+    max-width: 560px;
+  }
+  .cover-page__subtitle {
+    max-width: 52ch;
+  }
+  .cover-meta {
+    position: static !important;
+    width: auto !important;
+    max-width: 560px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    left: auto !important;
+  }
+  .cover-meta div { padding: 10px 12px; }
+  .cover-scroll { display: none; }
+
+  .pitch-footer__inner { grid-template-columns: 1fr; }
+  .page-five .spread,
+  .page-six .content {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .page-five .spread {
+    grid-template-columns: 1fr !important;
+  }
+  .page-six .content {
+    grid-template-columns: 1fr !important;
+  }
+  .page-seven .hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .page-seven .info-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Phone ≤640px — single column, 44px targets, readable type */
+@media (max-width: 640px) {
+  body { font-size: 15px; }
+  .pitch-nav__inner {
+    padding-left: 118px;
+  }
+  .floating-logo {
+    width: 96px !important;
+  }
+  .cover-page__content {
+    padding: 88px 16px 20px;
+  }
+  .cover-page__title-block h1 {
+    font-size: clamp(30px, 9vw, 40px) !important;
+    line-height: 1.08 !important;
+  }
+  .cover-meta {
+    grid-template-columns: 1fr !important;
+    max-width: 340px;
+  }
+  .page-five .feature-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .page-five .machine-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+  .page-five .machine-grid figure {
+    aspect-ratio: 1 / 1;
+  }
+  .page-six .app {
+    grid-template-columns: 1fr !important;
+  }
+  .page-six .app .photo {
+    min-height: 180px;
+  }
+  .page-six .machine img {
+    object-fit: cover;
+  }
+  .page-seven .country-list {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+  }
+  .page-seven .marker.blue {
+    width: 11px !important;
+    height: 11px !important;
+  }
+  .highlights,
+  .metric,
+  .info-card,
+  .page-five .feature-card,
+  .yellow-card,
+  .page-six .app .box,
+  .page-seven .location-box,
+  .page-seven .disclaimer {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .pitch-footer__inner {
+    padding-top: 44px;
+  }
+  .pitch-footer__bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Small phone ≤380px */
+@media (max-width: 380px) {
+  .cover-page__title-block h1 {
+    font-size: 30px !important;
+  }
+  .page-five .machine-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+}
+
+/* Motion + safe-area */
+@media (prefers-reduced-motion: reduce) {
+  .cover-scroll em::after { animation: none; }
+  .report-section { content-visibility: visible; }
+}
+@supports (padding: env(safe-area-inset-bottom)) {
+  .cover-page__content {
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+  .pitch-footer__bar {
+    padding-bottom: calc(26px + env(safe-area-inset-bottom));
+  }
+}
+
+/* ================================================================
+   SLOW MOTION — timeline + map only. Durations ~2x, wider stagger.
+   Original App.css untouched; overrides live here.
+   ================================================================ */
+.page-four.is-visible .timeline-path {
+  animation-duration: 5.5s !important;
+  animation-delay: 0.6s !important;
+}
+.page-four.is-visible .milestone,
+.page-four.is-visible .note {
+  animation-duration: 1.4s !important;
+}
+.page-four .m1 { animation-delay: 0.7s !important; }
+.page-four .m2 { animation-delay: 1.6s !important; }
+.page-four .m3 { animation-delay: 2.4s !important; }
+.page-four .m5 { animation-delay: 2.9s !important; }
+.page-four .m4 { animation-delay: 3.4s !important; }
+.page-four .m6 { animation-delay: 4s !important; }
+.page-four .m7 { animation-delay: 4.7s !important; }
+.page-four .note { animation-delay: 5.4s !important; }
+
+.page-seven .map-section {
+  animation-duration: 1.6s !important;
+  animation-delay: 0.8s !important;
+}
+.page-seven .marker {
+  animation-duration: 0.9s !important;
+}
+.page-seven .marker.green {
+  animation-duration: 1s !important;
+}
+
+@media (max-width: 1100px) {
+  .page-four.is-visible .timeline::before {
+    animation-duration: 3.6s !important;
+    animation-delay: 0.4s !important;
+  }
+  .page-four .milestone {
+    animation-duration: 1.2s !important;
+  }
+  .page-four .m1 { animation-delay: 0.8s !important; }
+  .page-four .m2 { animation-delay: 1.24s !important; }
+  .page-four .m3 { animation-delay: 1.68s !important; }
+  .page-four .m4 { animation-delay: 2.12s !important; }
+  .page-four .m5 { animation-delay: 2.56s !important; }
+  .page-four .m6 { animation-delay: 3s !important; }
+  .page-four .m7 { animation-delay: 3.44s !important; }
+  .page-four .note { animation-delay: 3.9s !important; }
+}
+
+/* Fix Page 8 sizing: Ensure it spans full width regardless of wrappers */
+.report-section > .page-8, .report-section > .page-9, .report-section > .page-10, 
+.report-section > .page-11, .report-section > .page-12, .report-section > .page-13, 
+.report-section > .page-14, .report-section > .page-15, .report-section > .page-16, 
+.report-section > .page-17 {
+  max-width: none !important;
+  width: 100vw !important;
+  margin: 0 !important;
+  left: 0 !important;
+}
+
+/* Fix gap on Page 3 (Image 1 gap between text and border) */
+.page-three .defines-intro {
+  margin-bottom: 12px !important;
+}
+
+/* ================================================================
+   SEAMLESS PAGE BREAK BLENDS ACROSS ALL REPORT SECTIONS
+   Eliminates all abrupt cuts and white borders between sections
+   ================================================================ */
+.report-section {
+  position: relative;
+  overflow: visible !important;
+}
+
+.report-section > .cover-page::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 18vh;
+  background: linear-gradient(to bottom, transparent 0%, rgba(255, 248, 229, 0.7) 60%, #FFF8E5 100%);
+  z-index: 10; pointer-events: none;
+}
+
+.report-section > .page-two::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 16vh;
+  background: linear-gradient(to bottom, transparent, #FFF8E5);
+  z-index: 10; pointer-events: none;
+}
+
+.report-section > .page-three::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 20vh;
+  background: linear-gradient(to bottom, transparent 0%, rgba(8, 58, 117, 0.6) 60%, #083A75 100%); 
+  z-index: 10; pointer-events: none;
+}
+
+.report-section > .page-four::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 20vh;
+  background: linear-gradient(to bottom, transparent 0%, rgba(255, 248, 229, 0.7) 60%, #FFF8E5 100%);
+  z-index: 10; pointer-events: none;
+}
+
+.report-section > .page-five::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 16vh;
+  background: linear-gradient(to bottom, transparent, #FFF8E5);
+  z-index: 10; pointer-events: none;
+}
+
+.report-section > .page-six::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 16vh;
+  background: linear-gradient(to bottom, transparent, #FFF8E5);
+  z-index: 10; pointer-events: none;
+}
+
+.report-section > .page-seven::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 22vh;
+  background: linear-gradient(to bottom, transparent 0%, rgba(5, 8, 12, 0.7) 60%, #05080c 100%);
+  z-index: 10; pointer-events: none;
+}
+
+.report-section > .page-8::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 14vh;
+  background: linear-gradient(to bottom, transparent, #05080c);
+  z-index: 10; pointer-events: none;
+}
+
+.report-section > .page-9::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 22vh;
+  background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.75) 60%, #ffffff 100%);
+  z-index: 10; pointer-events: none;
+}
+
+.report-section > .page-10::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 14vh;
+  background: linear-gradient(to bottom, transparent, #ffffff);
+  z-index: 10; pointer-events: none;
+}
+
+.report-section > .page-11::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 22vh;
+  background: linear-gradient(to bottom, transparent 0%, rgba(6, 31, 66, 0.75) 60%, #061F42 100%);
+  z-index: 10; pointer-events: none;
+}
+
+.report-section > .page-12::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 14vh;
+  background: linear-gradient(to bottom, transparent, #061F42);
+  z-index: 10; pointer-events: none;
+}
+
+.report-section > .page-13::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 14vh;
+  background: linear-gradient(to bottom, transparent, #061F42);
+  z-index: 10; pointer-events: none;
+}
+
+.report-section > .page-14::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 22vh;
+  background: linear-gradient(to bottom, transparent 0%, rgba(13, 40, 24, 0.7) 60%, #0d2818 100%);
+  z-index: 10; pointer-events: none;
+}
+
+.report-section > .page-15::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 24vh;
+  background: linear-gradient(to bottom, transparent 0%, rgba(13, 40, 24, 0.5) 40%, #ffffff 100%);
+  z-index: 10; pointer-events: none;
+}
+
+.report-section > .page-16::after {
+  content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 16vh;
+  background: linear-gradient(to bottom, transparent, #ffffff);
+  z-index: 10; pointer-events: none;
+}
+
+/* 2. Spread the content in pages 10, 11, and 14 (Images 2, 3, 4) */
+.page-10 .content,
+.page-11 .content,
+.page-14 .content {
+  max-width: 1750px !important;
+  width: 95vw !important;
+}
+
+/* 3. Fix text wrapping for "Responsible Practices" in page 15 (Image 5) */
+.page-15 h1, 
+.page-15 h1 span, 
+.page-15 .line-three, 
+.page-15 strong {
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+}
+.page-15 .line-three {
+  white-space: nowrap !important;
+}
+
+/* =========================================================
+   1:1 PDF IMPLEMENTATION OVERRIDES (Pages 8-17)
+   Ensuring headings, spans, and strong tags match PDF colors
+   ========================================================= */
+
+/* Pg9: "Chairman and Managing Director's Desk" is yellow, quote mark is yellow */
+.page-9 .heading h1, .page-9 .heading h1 strong {
+  color: var(--yellow) !important;
+}
+.page-9 .quote-mark {
+  color: var(--yellow) !important;
+}
+
+/* Pg11: TTRC (Blue) and Shaping Skills (Yellow) */
+.page-11 h1 span {
+  color: #083A75 !important; /* Brand Blue */
+}
+.page-11 h1 strong {
+  color: var(--color-brand-yellow-accent, #ffd000) !important;
+}
+
+/* Pg12: Innovation (Yellow) and H2s (Yellow) */
+.page-12 h1 strong, .page-12 h2 {
+  color: var(--color-brand-yellow-accent, #ffd000) !important;
+}
+
+/* Pg13: Integrating Technology (Yellow) and Roadmap Diamonds (Yellow) */
+.page-13 .left-content h2, .page-13 .roadmap-list .item .title span {
+  color: var(--color-brand-yellow-accent, #ffd000) !important;
+}
+
+/* Pg14: with One-Stop Solutions (Yellow) */
+.page-14 h1 strong {
+  color: var(--color-brand-yellow-accent, #ffd000) !important;
+}
+
+/* Pg15: Responsible (White), Practices (Yellow) */
+.page-15 h1 .line-two strong {
+  color: var(--white) !important;
+}
+.page-15 h1 .line-three strong {
+  color: var(--color-brand-yellow-accent, #ffd000) !important;
+}
+
+/* Pg16: Governed by Principles (Blue), Guided by Purpose (Yellow) */
+.page-16 h1 .line-one, .page-16 h2 {
+  color: #083A75 !important;
+}
+.page-16 h1 .line-two {
+  color: var(--color-brand-yellow-accent, #ffd000) !important;
+}
+
+/* Pg17: Legacy of Care (Blue), Vision for Impact (Yellow), Subheads (Yellow) */
+.page-17 h1 .line-one {
+  color: #083A75 !important;
+}
+.page-17 h1 .line-two, .page-17 h2 {
+  color: var(--color-brand-yellow-accent, #ffd000) !important;
+}
+
