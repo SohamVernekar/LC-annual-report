@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import DownloadCTA from './DownloadCTA'
 import './Navbar.css'
 
 const NAV_ITEMS = [
@@ -55,14 +56,16 @@ export default function Navbar() {
       {/* Top-right Hamburger Trigger Button */}
       <button
         type="button"
+        id="nav-trigger-button"
         className={`nav-trigger ${isOpen ? 'is-open' : ''}`}
         onClick={() => setIsOpen((prev) => !prev)}
-        aria-label={isOpen ? 'Close menu' : 'Open menu'}
+        aria-label={isOpen ? 'Close table of contents menu' : 'Open table of contents menu'}
         aria-expanded={isOpen}
+        aria-controls="toc-nav-drawer"
       >
-        <span className="nav-trigger__bar nav-trigger__bar--1" />
-        <span className="nav-trigger__bar nav-trigger__bar--2" />
-        <span className="nav-trigger__bar nav-trigger__bar--3" />
+        <span className="nav-trigger__bar nav-trigger__bar--1" aria-hidden="true" />
+        <span className="nav-trigger__bar nav-trigger__bar--2" aria-hidden="true" />
+        <span className="nav-trigger__bar nav-trigger__bar--3" aria-hidden="true" />
       </button>
 
       {/* Overlay Backdrop */}
@@ -74,8 +77,11 @@ export default function Navbar() {
 
       {/* Slide-over Drawer */}
       <aside
+        id="toc-nav-drawer"
         className={`nav-drawer ${isOpen ? 'is-open' : ''}`}
-        aria-label="Navigation drawer"
+        role="dialog"
+        aria-modal={isOpen}
+        aria-label="Table of Contents"
         aria-hidden={!isOpen}
       >
         <div className="nav-drawer__header">
@@ -83,7 +89,7 @@ export default function Navbar() {
           <span className="nav-drawer__badge">Annual Report 2024–25</span>
         </div>
 
-        <nav className="nav-drawer__nav">
+        <nav className="nav-drawer__nav" aria-label="Chapter links">
           <ul className="nav-drawer__list">
             {NAV_ITEMS.map((item, idx) => (
               <li key={item.id} className="nav-drawer__item">
@@ -95,7 +101,7 @@ export default function Navbar() {
                     handleLinkClick(item.id)
                   }}
                 >
-                  <span className="nav-drawer__link-num">
+                  <span className="nav-drawer__link-num" aria-hidden="true">
                     {String(idx + 1).padStart(2, '0')}
                   </span>
                   <span className="nav-drawer__link-text">{item.label}</span>
@@ -104,6 +110,10 @@ export default function Navbar() {
             ))}
           </ul>
         </nav>
+
+        <div className="nav-drawer__footer">
+          <DownloadCTA variant="drawer" text="Download Report PDF" />
+        </div>
       </aside>
     </>
   )

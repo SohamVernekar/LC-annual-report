@@ -15,16 +15,16 @@
   --lc-gray-200: #d9d9d9;
   --lc-gray-100: #f1f1f1;
   --lc-cream: #f6f3ad;
-  --lc-cream-soft: #fff8e5;
-  --font-primary: 'Roboto', Arial, Helvetica, sans-serif;
-  --font-display: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
+  --lc-cream-soft: #fffdf5;
+  --font-primary: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-display: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Georgia', 'Times New Roman', serif;
 
-  /* Semantic accents — the single source of truth for brand color usage.
-     Every yellow/blue in the report resolves to one of these so the palette
-     stays cohesive across all seven chapters. */
+  /* Semantic accents — the single source of truth for brand color usage. */
   --accent: #ffc400;
   --card-yellow: #ffd24a;
   --brand-blue: #1268b3;
+  --brand-blue-dark: #083a75;
   --radius-xs: 4px;
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -43,12 +43,11 @@
   --space-xl: 64px;
   --space-2xl: 96px;
   --space-section: clamp(48px, 8vw, 120px);
-  --content-max: 1280px;
-  --content-gutter: clamp(18px, 5vw, 64px);
+  --content-max: min(1680px, 94vw);
+  --content-gutter: clamp(18px, 3.5vw, 48px);
   --shadow-card: 0 12px 32px rgba(0, 0, 0, .16);
 
-  /* Cohesive elevation scale — soft, low-alpha, consistent across chapters.
-     Resting cards sit nearly flat; hover raises one step. */
+  /* Cohesive elevation scale */
   --shadow-xs: 0 1px 2px rgba(16, 24, 40, .05);
   --shadow-sm: 0 1px 3px rgba(16, 24, 40, .08), 0 1px 2px rgba(16, 24, 40, .05);
   --shadow-md: 0 4px 6px -2px rgba(16, 24, 40, .06), 0 2px 4px -2px rgba(16, 24, 40, .04);
@@ -77,9 +76,48 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Display type: Poppins for headings, Roboto for everything else. */
-h1, h2, h3, h4 {
+/* Skip link for keyboard and screen reader accessibility */
+.skip-to-content {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100000;
+  padding: 10px 18px;
+  background: #1268b3;
+  color: #ffffff !important;
   font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transform: translateY(-160%);
+  transition: transform 0.2s ease-out;
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
+  outline: 3px solid #ffce00;
+  outline-offset: 2px;
+}
+
+/* Screen reader only utility class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Display type: Poppins for headings, Roboto for everything else. */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: inherit;
 }
 
 ::selection {
@@ -89,13 +127,18 @@ h1, h2, h3, h4 {
 
 :focus-visible {
   outline: 2px solid var(--brand-blue);
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
 * { box-sizing: border-box; }
 
 a {
   color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 img {
@@ -104,7 +147,7 @@ img {
 }
 
 button, input, textarea, select {
-  font: inherit;
+  font-family: inherit;
 }
 
 button {
@@ -124,4 +167,16 @@ button {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: var(--grid-gap, var(--space-md));
+}
+
+/* Accessibility: Support prefers-reduced-motion for users with motion sensitivity */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

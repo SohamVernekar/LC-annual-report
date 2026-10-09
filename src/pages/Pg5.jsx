@@ -10,7 +10,7 @@ import machine09 from '../assets/pg5/reclamax-65.webp'
 
 function Pg5() {
   return (
-    <main className="report-page page-five" aria-label="Product portfolio page">
+    <div className="report-page page-five">
       <section className="spread">
         <section className="left-column">
           <div className="intro">
@@ -88,11 +88,11 @@ function Pg5() {
             <figure><img src={machine08} alt="Lohia Corp industrial machinery" loading="lazy" decoding="async" /></figure>
           </div>
           <div className="machine-large">
-            <figure><img src={machine09} alt="Lohia Corp ReclaMax machinery" loading="lazy" decoding="async" /></figure>
+            <figure><img src={machine09} alt="Lohia Corp ReclaMax recycling machinery" loading="lazy" decoding="async" /></figure>
           </div>
         </section>
       </section>
-    </main>
+    </div>
   )
 }
 

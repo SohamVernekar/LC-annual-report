@@ -2,7 +2,7 @@ import bgImage from '../assets/pg4/bg-image.webp'
 
 function Pg4() {
   return (
-    <main className="report-page page-four" aria-label="Our Journey page">
+    <div className="report-page page-four">
       <div className="page-art" aria-hidden="true" style={{ backgroundImage: `url(${bgImage})` }} />
 
       <section className="intro">
@@ -101,7 +101,7 @@ function Pg4() {
           </p>
         </aside>
       </section>
-    </main>
+    </div>
   )
 }
 

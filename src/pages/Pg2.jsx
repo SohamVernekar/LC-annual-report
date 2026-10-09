@@ -2,7 +2,7 @@ import machineArt from '../assets/pg2/foreground.webp'
 
 function Pg2() {
   return (
-    <main className="report-page page-two" aria-label="Corporate overview page">
+    <div className="report-page page-two">
       <img className="machine-art" src={machineArt} alt="" aria-hidden="true" loading="lazy" decoding="async" />
 
       <section className="intro" id="theme-introduction">
@@ -30,7 +30,7 @@ function Pg2() {
         </p>
       </section>
 
-      <aside className="highlights">
+      <aside className="highlights" aria-label="Key financial highlights for FY25">
         <h2>
           <span>Key Highlights</span>
           <br />
@@ -60,7 +60,7 @@ function Pg2() {
 
         <p className="footnote">*figures are as per standalone financial statements.</p>
       </aside>
-    </main>
+    </div>
   )
 }
 

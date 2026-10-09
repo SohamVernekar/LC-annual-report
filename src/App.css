@@ -339,7 +339,7 @@ img {
   z-index: 3;
   left: 4.15%;
   top: 31.5%;
-  width: 25%;
+  width: clamp(340px, 28vw, 440px);
   animation: slideRight 0.85s var(--ease-soft) 0.15s both;
 }
 
@@ -352,7 +352,7 @@ img {
 
 .intro h1 {
   margin: 0 0 31px;
-  font-size: clamp(27px, 2.5vw, 39px);
+  font-size: clamp(30px, 2.6vw, 44px);
   line-height: 1.08;
   letter-spacing: -.035em;
   font-weight: 400;
@@ -363,16 +363,18 @@ img {
 
 .intro p {
   margin: 0 0 14px;
-  font-size: clamp(11px, .9vw, 14px);
-  line-height: 1.42;
+  font-size: clamp(14.5px, 1vw, 17px);
+  line-height: 1.55;
   font-weight: 400;
+  color: #1a1a1a;
 }
 
 .intro .lead {
-  font-size: clamp(13px, 1.03vw, 16px);
-  line-height: 1.48;
+  font-size: clamp(15.5px, 1.1vw, 18.5px);
+  line-height: 1.5;
   margin-bottom: 15px;
-  max-width: 340px;
+  max-width: 440px;
+  color: #101010;
 }
 
 /* ---- Highlights sidebar ------------------------------------- */
@@ -381,12 +383,12 @@ img {
   z-index: 4;
   right: 5.8%;
   top: 27.5%;
-  width: 20.8%;
+  width: clamp(300px, 23vw, 380px);
   height: 48%;
   min-height: 100vh;
-  padding: 21px 24px 18px;
+  padding: 24px 28px 20px;
   border-radius: 14px;
-  background: rgba(255,255,255,.84);
+  background: rgba(255,255,255,.92);
   box-shadow: var(--shadow-sm);
   animation: slideLeft 0.85s var(--ease-soft) 0.3s both;
 }
@@ -394,7 +396,7 @@ img {
 .highlights h2 {
   margin: 0 0 21px;
   color: var(--brand-blue);
-  font-size: clamp(25px, 2.25vw, 36px);
+  font-size: clamp(26px, 2.3vw, 38px);
   line-height: 1.08;
   font-weight: 400;
   letter-spacing: -.035em;
@@ -404,9 +406,9 @@ img {
 
 .summary {
   margin: 0 0 20px;
-  color: #5e5e5e;
-  font-size: clamp(9px, .72vw, 11px);
-  line-height: 1.48;
+  color: #333333;
+  font-size: clamp(14px, 0.9vw, 16px);
+  line-height: 1.5;
 }
 
 .metric {
@@ -416,28 +418,29 @@ img {
 }
 
 .metric strong {
-  font-size: clamp(24px, 2.15vw, 34px);
-  font-weight: 500;
+  font-size: clamp(26px, 2.3vw, 38px);
+  font-weight: 700;
   letter-spacing: -.025em;
 }
 
 .metric span {
-  font-size: clamp(14px, 1.12vw, 18px);
+  font-size: clamp(15px, 1.15vw, 19px);
   font-weight: 600;
 }
 
 .metric small {
   display: block;
   color: #111;
-  font-size: clamp(9px, .72vw, 11px);
-  margin-top: -1px;
+  font-size: clamp(13px, 0.88vw, 15px);
+  font-weight: 500;
+  margin-top: 1px;
 }
 
 .footnote {
   margin: 5px 0 0;
-  font-size: 8px;
+  font-size: 11.5px;
   font-style: italic;
-  color: #222;
+  color: #404042;
 }
 
 /* ================================================================
@@ -532,8 +535,8 @@ img {
   padding: 31px 30px;
 }
 
-.info-card h2 { margin: 0 0 9px; font-size: 20px; line-height: 1.1; color: #111; }
-.info-card p  { margin: 0 0 11px; font-size: 11px; line-height: 1.4; text-align: justify; color: #222; }
+.info-card h2 { margin: 0 0 9px; font-size: clamp(18px, 1.3vw, 24px); line-height: 1.15; color: #083a75; font-weight: 700; }
+.info-card p  { margin: 0 0 11px; font-size: clamp(14px, .92vw, 16px); line-height: 1.55; color: #1a1a1a; }
 
 .who-card   { left: 3.9%; top: 27.5%; width: 21%; height: 19.5%; animation: slideRight 0.7s var(--ease-soft) 0.25s both; }
 .what-card  { left: 22%;  top: 42.1%; width: 21%; height: 25%;   padding-top: 35px; animation: slideRight 0.7s var(--ease-soft) 0.4s both; }
@@ -549,8 +552,8 @@ img {
   animation: fadeUp 0.8s var(--ease-soft) 0.3s both;
 }
 
-.defines h2 { margin: 0 0 9px; font-size: 20px; line-height: 1.1; }
-.defines-intro { margin: 0 0 31px; font-size: 11px; line-height: 1.42; max-width: 100%; }
+.defines h2 { margin: 0 0 9px; font-size: clamp(20px, 1.4vw, 26px); line-height: 1.15; color: #083a75; font-weight: 700; }
+.defines-intro { margin: 0 0 24px; font-size: clamp(14.5px, .95vw, 16.5px); line-height: 1.55; color: #222222; max-width: 100%; }
 
 .value-grid {
   position: relative;
@@ -562,9 +565,10 @@ img {
 
 .yellow-card {
   min-height: 170px;
-  height: 170px;
+  height: auto;
   padding: 18px 21px;
   background: var(--card-yellow);
+  color: #101010;
   border-radius: 14px;
   animation: scaleIn 0.6s var(--ease-soft) both;
 }
@@ -572,8 +576,8 @@ img {
 .yellow-card:nth-child(2) { animation-delay: 0.48s; }
 .yellow-card:nth-child(3) { animation-delay: 0.61s; grid-column: 1; }
 
-.yellow-card h3 { font-size: 15px; line-height: 1; margin: 5px 0 7px; }
-.yellow-card p  { font-size: 11px; line-height: 1.4; margin: 0; }
+.yellow-card h3 { font-size: clamp(16.5px, 1.1vw, 19px); font-weight: 700; color: #061f42; line-height: 1.2; margin: 6px 0 8px; }
+.yellow-card p  { font-size: clamp(13.5px, .88vw, 15px); color: #101010; line-height: 1.5; margin: 0; }
 
 .line-icon { height: 38px; width: 38px; color: var(--brand-blue); }
 .line-icon svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
@@ -904,7 +908,7 @@ img {
 .page-four .eyebrow { font-size: clamp(14px,1.35vw,28px); font-weight: 700; margin: 0 0 .8em; }
 .page-four h1 { font-size: clamp(32px,3.25vw,66px); font-weight: 400; line-height: 1.08; margin: 0; }
 .page-four h1 strong { color: var(--accent); font-weight: 700; }
-.page-four .lead { font-size: clamp(13px,1.08vw,22px); line-height: 1.45; margin-top: 2em; max-width: 850px; }
+.page-four .lead { font-size: clamp(16px,1.2vw,22px); line-height: 1.55; margin-top: 2em; max-width: 980px; }
 
 /* ---- Timeline --------------------------------------------- */
 .page-four .timeline { position: absolute; inset: 0; z-index: 3; }
@@ -957,7 +961,7 @@ img {
 }
 
 .page-four .milestone h2  { margin: 17px 0 13px; font-size: clamp(22px,2.05vw,42px); color: var(--accent); line-height: 1; font-weight: 500; }
-.page-four .milestone ul  { list-style: none; margin: 0; padding: 0; font-size: clamp(10px,.78vw,16px); line-height: 1.42; color: rgba(255,255,255,.88); }
+.page-four .milestone ul  { list-style: none; margin: 0; padding: 0; font-size: clamp(12.5px,.88vw,16.5px); line-height: 1.5; color: rgba(255,255,255,.92); }
 .page-four .milestone li  { position: relative; padding-left: 17px; margin: 0 0 10px; }
 /* Bullet is the brand chevron (shared BRAND MARK rules above). */
 .page-four .milestone li::before { position: absolute; left: 0; top: .34em; width: 9px; height: 8px; }
@@ -982,17 +986,18 @@ img {
   width: 15.8%;
   border: 2px solid var(--accent);
   border-radius: 14px;
-  background: rgba(18, 104, 179, .34);
-  padding: 1.05% 1.15%;
-  color: rgba(255,255,255,.88);
-  font-size: clamp(8px,.63vw,13px);
-  line-height: 1.35;
+  background: rgba(8, 58, 117, 0.65);
+  backdrop-filter: blur(6px);
+  padding: 14px 16px;
+  color: #ffffff;
+  font-size: clamp(13px, .85vw, 15px);
+  line-height: 1.5;
   opacity: 0;
   transform: translateY(22px);
   animation-delay: 2.7s;
   z-index: 2;
 }
-.page-four .note strong { display: block; color: var(--accent); margin-bottom: 8px; }
+.page-four .note strong { display: block; color: var(--accent); margin-bottom: 6px; font-weight: 700; font-size: 1.05em; }
 .page-four .note p { margin: 0; }
 
 /* Vertical timeline — used on tablets and phones, where the zigzag rows
@@ -1074,8 +1079,8 @@ img {
 .page-five .intro h1 { margin: 0; font-size: clamp(31px,2.8vw,52px); line-height: 1.08; letter-spacing: -.04em; animation: fadeUp 0.8s var(--ease-soft) 0.15s both; }
 .page-five .intro h1 strong { color: var(--accent); }
 
-.page-five .lead { font-size: clamp(15px,1.1vw,20px); line-height: 1.45; margin: 18px 0; max-width: 760px; animation: fadeUp 0.7s var(--ease-soft) 0.3s both; }
-.page-five .body-copy { color: #4a4a4a; font-size: clamp(12px,.82vw,15px); line-height: 1.45; margin: 0 0 18px; max-width: 900px; animation: fadeUp 0.7s var(--ease-soft) 0.4s both; }
+.page-five .lead { font-size: clamp(17px,1.2vw,22px); line-height: 1.45; margin: 18px 0; max-width: 900px; animation: fadeUp 0.7s var(--ease-soft) 0.3s both; }
+.page-five .body-copy { color: #4a4a4a; font-size: clamp(14.5px,.95vw,17px); line-height: 1.55; margin: 0 0 18px; max-width: 1050px; animation: fadeUp 0.7s var(--ease-soft) 0.4s both; }
 .page-five .intro h2 { font-size: clamp(19px,1.5vw,27px); color: var(--brand-blue); line-height: 1.2; margin: 0 0 14px; animation: fadeUp 0.7s var(--ease-soft) 0.5s both; }
 
 .page-five .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
@@ -1096,11 +1101,11 @@ img {
 .page-five .feature-card:hover { translate: 0 -4px; box-shadow: var(--shadow-lg); }
 .page-five .card-icon { width: 30px; margin-bottom: 14px; background-color: var(--brand-blue); }
 .page-five .feature-card h3 { margin: 0 0 10px; font-size: 16px; line-height: 1.2; }
-.page-five .feature-card p  { margin: 0; font-size: 12px; line-height: 1.4; }
+.page-five .feature-card p  { margin: 0; font-size: clamp(13.5px, 0.88vw, 15px); line-height: 1.45; }
 
 .page-five .portfolio-copy { margin-top: 18px; animation: fadeUp 0.7s var(--ease-soft) 0.2s both; }
 .page-five .portfolio-copy h2 { margin: 0 0 10px; color: var(--brand-blue); font-size: clamp(25px,2vw,35px); }
-.page-five .portfolio-copy p  { margin: 0; font-size: clamp(11px,.78vw,14px); line-height: 1.42; color: #444; }
+.page-five .portfolio-copy p  { margin: 0; font-size: clamp(13px,.88vw,15.5px); line-height: 1.5; color: #444; }
 
 .page-five .machine-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-top: 18px; animation: fadeIn 0.8s var(--ease-soft) 0.4s both; }
 .page-five .machine-grid figure { margin: 0; background: #f7f4ee; border-radius: 14px; overflow: hidden; height: 112px; transition: transform 0.35s var(--ease-soft); padding: 8px; }
@@ -1147,13 +1152,13 @@ img {
 .page-six h1 { margin: 0; font-size: clamp(31px,3vw,48px); line-height: 1.08; font-weight: 400; color: var(--brand-blue); letter-spacing: -1.8px; animation: fadeUp 0.8s var(--ease-soft) 0.15s both; }
 .page-six h1 strong { display: block; color: var(--accent); font-weight: 800; }
 
-.page-six .lead { margin: 45px 0 23px; max-width: 930px; font-size: 20px; line-height: 1.42; font-weight: 500; animation: fadeUp 0.7s var(--ease-soft) 0.3s both; }
+.page-six .lead { margin: 45px 0 23px; max-width: 1050px; font-size: clamp(18px, 1.35vw, 23px); line-height: 1.45; font-weight: 500; animation: fadeUp 0.7s var(--ease-soft) 0.3s both; }
 
 .page-six .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 12px; }
 
 .page-six .portfolio { padding-top: 34px; }
 .page-six .portfolio h2 { font-size: 28px; color: var(--brand-blue); font-weight: 500; margin: 0 0 14px; }
-.page-six .portfolio p  { font-size: 14px; line-height: 1.48; color: #4a4a4a; margin: 0; max-width: 820px; }
+.page-six .portfolio p  { font-size: clamp(14.5px, 0.95vw, 16.5px); line-height: 1.55; color: #4a4a4a; margin: 0; max-width: 950px; }
 .page-six .portfolio p em { font-weight: 600; color: #222; }
 
 .page-six .application-list { margin-top: 28px; display: flex; flex-direction: column; gap: 16px; }
@@ -1180,7 +1185,7 @@ img {
 .page-six .app .photo img { width: 100%; height: 100%; display: block; object-fit: cover; }
 .page-six .app .box { position: relative; z-index: 2; margin: 0 0 0 -1px; background: #fff; border-radius: 0 14px 14px 14px; padding: 18px 20px 16px; box-shadow: var(--shadow-lg); }
 .page-six .app .box h3 { margin: 0 0 10px; color: var(--brand-blue); font-size: clamp(17px,1.35vw,22px); font-weight: 700; }
-.page-six .app .box p  { margin: 0; font-size: clamp(10px,.77vw,14px); line-height: 1.38; color: #555; text-align: left; }
+.page-six .app .box p  { margin: 0; font-size: clamp(12.5px,.85vw,14.5px); line-height: 1.45; color: #555; text-align: left; }
 
 .page-six .machine {
   margin-top: 34px;
@@ -1221,15 +1226,15 @@ img {
 .page-seven .kicker { font-size: clamp(28px,2.1vw,40px); line-height: 1.08; font-weight: 800; margin: 0 0 20px; animation: slideRight 0.8s var(--ease-soft) 0.1s both; }
 .page-seven .kicker .blue   { color: var(--brand-blue); }
 .page-seven .kicker .yellow { color: var(--accent); }
-.page-seven .lead { max-width: 560px; font-size: clamp(17px,1.12vw,22px); line-height: 1.42; margin: 0; animation: fadeUp 0.7s var(--ease-soft) 0.3s both; }
+.page-seven .lead { max-width: 680px; font-size: clamp(18px,1.25vw,24px); line-height: 1.45; margin: 0; animation: fadeUp 0.7s var(--ease-soft) 0.3s both; }
 .page-seven .presence h2 { color: var(--brand-blue); font-size: clamp(25px,1.8vw,34px); margin: 0 0 18px; line-height: 1.1; animation: slideLeft 0.8s var(--ease-soft) 0.15s both; }
-.page-seven .country-list { font-size: clamp(14px,.94vw,18px); line-height: 1.48; font-weight: 500; animation: fadeIn 0.9s var(--ease-soft) 0.35s both; }
+.page-seven .country-list { font-size: clamp(15px,1vw,19px); line-height: 1.5; font-weight: 500; animation: fadeIn 0.9s var(--ease-soft) 0.35s both; }
 
 /* ---- Map ------------------------------------------------------- */
 .page-seven .map-section { position: relative; margin-top: 24px; animation: fadeIn 0.8s var(--ease-soft) 0.4s both; }
 .page-seven .map-viewport { 
   position: relative; 
-  width: min(90vw, 1400px); 
+  width: min(92vw, 1600px); 
   margin: 0 auto; 
   overflow: hidden; 
   border-radius: 12px; 
@@ -1319,9 +1324,9 @@ img {
 .page-seven .location-title { display: flex; align-items: center; gap: 10px; color: var(--brand-blue); font-size: clamp(17px, 1.25vw, 20px); font-weight: 700; margin: 0 0 12px; }
 .page-seven .pin-icon { width: 17px; height: 21px; background: #68bd45; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); position: relative; flex: 0 0 auto; }
 .page-seven .pin-icon::after { content: ""; position: absolute; width: 6px; height: 6px; border-radius: 50%; background: #f7f5ef; left: 5.5px; top: 5.5px; }
-.page-seven .location-box ul { padding-left: 21px; margin: 0; font-size: 16px; line-height: 1.55; }
+.page-seven .location-box ul { padding-left: 21px; margin: 0; font-size: clamp(15px, 1vw, 17.5px); line-height: 1.55; }
 .page-seven .disclaimer h4 { color: var(--brand-blue); font-size: 18px; margin: 0 0 6px; }
-.page-seven .disclaimer p { margin: 0; font-size: 12.5px; line-height: 1.5; color: #444; }
+.page-seven .disclaimer p { margin: 0; font-size: clamp(13px, 0.85vw, 14.5px); line-height: 1.5; color: #444; }
 
 @media (max-width: 1200px) {
   .page-seven { padding: 102px 28px 20px; }
@@ -1575,8 +1580,8 @@ img {
 @media (min-width: 1368px) {
   .page-three .info-card { padding: 1.5137vw 1.4648vw; }
   .page-three .what-card { padding-top: 1.7090vw; }
-  .page-three .info-card h2 { font-size: 0.9766vw; margin: 0 0 0.4395vw; }
-  .page-three .info-card p { font-size: 0.5371vw; margin: 0 0 0.5371vw; }
+  .page-three .info-card h2 { font-size: clamp(16px, 1.15vw, 22px); margin: 0 0 0.4395vw; }
+  .page-three .info-card p { font-size: clamp(12.5px, 0.75vw, 14.5px); margin: 0 0 0.5371vw; }
 }
 
 /* ================================================================
@@ -1812,6 +1817,23 @@ html {
     aspect-ratio: auto !important;
   }
 
+  .floating-logo {
+    top: 12px;
+    left: 14px;
+    width: 98px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    z-index: 9995;
+  }
+  .floating-logo.is-dark {
+    background: rgba(5, 8, 12, 0.85);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  }
+
   .cover-page__background,
   .cover-page__foreground {
     object-fit: cover;
@@ -1843,7 +1865,17 @@ html {
   .page-two .intro {
     position: relative;
     order: 1;
-    padding: 86px 20px 0;
+    padding: 92px 20px 0;
+  }
+
+  .page-two .intro p {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .page-two .intro .lead {
+    font-size: 16px;
+    line-height: 1.5;
   }
 
   .page-two .highlights {
@@ -1852,6 +1884,34 @@ html {
     margin: 24px 20px;
     min-height: 0;
     height: auto;
+    padding: 22px 20px;
+  }
+
+  .page-two .highlights h2 {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+
+  .page-two .summary {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .page-two .metric strong {
+    font-size: 28px;
+  }
+
+  .page-two .metric span {
+    font-size: 16px;
+  }
+
+  .page-two .metric small {
+    font-size: 13px;
+  }
+
+  .page-two .footnote {
+    font-size: 12px;
   }
 
   .page-two .machine-art {
@@ -1861,6 +1921,56 @@ html {
     width: 100%;
     height: auto;
     object-fit: contain;
+  }
+
+  /* Page 3 mobile typography */
+  .page-three .info-card {
+    padding: 20px 22px;
+    border-radius: 12px;
+    margin: 16px 20px;
+  }
+  .page-three .info-card h2 { font-size: 20px; }
+  .page-three .info-card p { font-size: 14.5px; line-height: 1.55; text-align: left; }
+  .page-three .defines { margin: 24px 20px 60px; }
+  .page-three .defines h2 { font-size: 22px; }
+  .page-three .defines-intro { font-size: 15px; line-height: 1.55; }
+  .page-three .yellow-card { min-height: auto; height: auto; padding: 18px 20px; }
+  .page-three .yellow-card h3 { font-size: 17px; }
+  .page-three .yellow-card p { font-size: 14px; line-height: 1.5; }
+
+  /* Page 4 mobile typography */
+  .page-four .milestone h2 { font-size: 26px; }
+  .page-four .milestone ul { font-size: 14.5px; line-height: 1.55; }
+  .page-four .note { font-size: 14px; line-height: 1.5; }
+
+  /* Page 5 mobile typography */
+  .page-five .intro h1 { font-size: clamp(28px, 6.5vw, 42px); }
+  .page-five .lead { font-size: 15.5px; line-height: 1.5; }
+  .page-five .body-copy { font-size: 14.5px; line-height: 1.55; }
+  .page-five .portfolio-copy h2 { font-size: 24px; }
+  .page-five .portfolio-copy p { font-size: 14.5px; line-height: 1.5; }
+
+  /* Page 6 mobile typography */
+  .page-six .kicker { font-size: 18px; }
+  .page-six h1 { font-size: clamp(26px, 6.5vw, 38px); letter-spacing: -0.02em; }
+  .page-six .app .box h3 { font-size: 18px; }
+  .page-six .app .box p { font-size: 14px; line-height: 1.5; }
+
+  /* Page 7 mobile typography */
+  .page-seven .kicker { font-size: clamp(26px, 6vw, 36px); }
+  .page-seven .lead { font-size: 15.5px; line-height: 1.5; }
+  .page-seven .presence h2 { font-size: 24px; }
+  .page-seven .country-list { font-size: 13.5px; line-height: 1.5; }
+  .page-seven .location-title { font-size: 18px; }
+  .page-seven .location-box ul { font-size: 14.5px; line-height: 1.55; }
+  .page-seven .disclaimer h4 { font-size: 18px; }
+  .page-seven .disclaimer p { font-size: 13.5px; line-height: 1.5; }
+}
+
+@media (max-width: 600px) {
+  .page-three .value-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 }
 

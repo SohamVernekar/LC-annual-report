@@ -9,7 +9,6 @@ import asset10_5 from '../assets/pg10/gaurav swaroop.webp';
 import asset10_6 from '../assets/pg10/keith reddy padmaja reddy.webp';
 import asset10_7 from '../assets/pg10/naresh kumar gupta.webp';
 import asset10_8 from '../assets/pg10/paritosh kumar mukherjee.webp';
-import asset10_9 from '../assets/pg10/potrait bg.webp';
 import asset10_10 from '../assets/pg10/raj kumar lohia.webp';
 import asset10_11 from '../assets/pg10/rajendra kumar arya.webp';
 import asset10_12 from '../assets/pg10/shikha srivastava.webp';

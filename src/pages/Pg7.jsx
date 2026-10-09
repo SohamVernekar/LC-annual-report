@@ -31,7 +31,7 @@ function Pg7() {
   ]
 
   return (
-    <main className="page page-seven">
+    <div className="page page-seven">
       <section className="hero-grid">
         <div>
           <h1 className="kicker">
@@ -114,7 +114,7 @@ function Pg7() {
           <p>This map is a creative representation designed to illustrate our presence and reach. It is intended for visual depiction and may not reflect precise geographical boundaries.</p>
         </div>
       </section>
-    </main>
+    </div>
   )
 }
 

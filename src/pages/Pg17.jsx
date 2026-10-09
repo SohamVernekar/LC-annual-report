@@ -252,6 +252,7 @@ function Pg17() {
             aligned, collective action is encouraged, and long-term, responsible growth is achieved.
           </p>
 
+          {/* Desktop Table View */}
           <div className="stakeholders-table-container">
             <table className="stakeholders-table">
               <thead>
@@ -286,6 +287,41 @@ function Pg17() {
                 ))}
               </tbody>
             </table>
+          </div>
+
+          {/* Mobile Responsive Cards View */}
+          <div className="stakeholders-cards-mobile">
+            {stakeholdersData.map((row, idx) => (
+              <div className="stakeholder-card" key={idx}>
+                <div className="stakeholder-card__header">
+                  <div className="stake-icon-wrap">
+                    {row.icon}
+                  </div>
+                  <h3 className="stakeholder-card__title">{row.name}</h3>
+                </div>
+
+                <div className="stakeholder-card__body">
+                  <div className="stakeholder-card__section">
+                    <h4 className="card-section-label">Stakeholder Needs</h4>
+                    <ul className="card-cell-list">
+                      {row.needs.map((item, i) => <li key={i}>{item}</li>)}
+                    </ul>
+                  </div>
+
+                  <div className="stakeholder-card__section">
+                    <h4 className="card-section-label">Why We Engage?</h4>
+                    <p className="card-why-text">{row.why}</p>
+                  </div>
+
+                  <div className="stakeholder-card__section">
+                    <h4 className="card-section-label">How We Engage?</h4>
+                    <ul className="card-cell-list">
+                      {row.how.map((item, i) => <li key={i}>{item}</li>)}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </article>
       </section>

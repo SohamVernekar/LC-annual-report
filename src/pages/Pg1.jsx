@@ -3,7 +3,7 @@ import pg1Fg from '../assets/pg1/foreground.webp'
 
 function Pg1() {
   return (
-    <main className="cover-page" aria-label="LohiaCorp Annual Report 2024–25 cover">
+    <div className="cover-page">
       <img className="cover-page__background" src={pg1Bg} alt="" aria-hidden="true" fetchPriority="high" />
       <img className="cover-page__foreground" src={pg1Fg} alt="" aria-hidden="true" decoding="async" />
 
@@ -25,7 +25,7 @@ function Pg1() {
           </p>
         </section>
       </div>
-    </main>
+    </div>
   )
 }
 

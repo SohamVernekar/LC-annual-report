@@ -8,7 +8,7 @@ import machinery from '../assets/pg6/machinery.webp'
 function Pg6() {
   return (
     <div className="page page-six">
-      <main className="content">
+      <div className="content">
         {/* LEFT column: kicker, heading, and 3 application cards */}
         <section className="left">
           <p className="kicker">Product Applications</p>
@@ -19,7 +19,7 @@ function Pg6() {
 
           <div className="application-list application-list--left">
             <article className="app">
-              <div className="photo"><img src={agrotex} alt="Agrotex" loading="lazy" decoding="async" /></div>
+              <div className="photo"><img src={agrotex} alt="Agro-textiles applications" loading="lazy" decoding="async" /></div>
               <div className="box">
                 <h3>Agrotex</h3>
                 <p>Agro-textiles are playing an important role in the fields of agriculture, horticulture, animal husbandry,
@@ -29,7 +29,7 @@ function Pg6() {
             </article>
 
             <article className="app">
-              <div className="photo"><img src={buildtex} alt="Buildtex" loading="lazy" decoding="async" /></div>
+              <div className="photo"><img src={buildtex} alt="Building and construction textiles" loading="lazy" decoding="async" /></div>
               <div className="box">
                 <h3>Buildtex</h3>
                 <p>This comprises a wide variety of products and solutions, such as tarpaulin, roof underlayment, scaffolding
@@ -39,7 +39,7 @@ function Pg6() {
             </article>
 
             <article className="app">
-              <div className="photo"><img src={geotex} alt="Geotex" loading="lazy" decoding="async" /></div>
+              <div className="photo"><img src={geotex} alt="Geotextile fabric applications" loading="lazy" decoding="async" /></div>
               <div className="box">
                 <h3>Geotex</h3>
                 <p>Geo-textiles are durable and permeable wide-width fabrics designed for use in civil engineering and
@@ -50,11 +50,11 @@ function Pg6() {
           </div>
         </section>
 
-        {/* RIGHT column: 2 more app cards + machinery image (FIXED: no longer absolute-positioned) */}
+        {/* RIGHT column: 2 more app cards + machinery image */}
         <section className="right">
           <div className="application-list application-list--right">
             <article className="app">
-              <div className="photo"><img src={packtex} alt="Packtex" loading="lazy" decoding="async" /></div>
+              <div className="photo"><img src={packtex} alt="Packaging and storage textiles" loading="lazy" decoding="async" /></div>
               <div className="box">
                 <h3>Packtex</h3>
                 <p>A key category, it offers flexible packaging, storage, and protection solutions, with capacities ranging
@@ -66,7 +66,7 @@ function Pg6() {
             </article>
 
             <article className="app">
-              <div className="photo"><img src={special} alt="Special Applications" loading="lazy" decoding="async" /></div>
+              <div className="photo"><img src={special} alt="Special technical textile applications" loading="lazy" decoding="async" /></div>
               <div className="box">
                 <h3>Special Applications</h3>
                 <p>This category encompasses high-performance solutions engineered for unique and demanding applications
@@ -77,12 +77,11 @@ function Pg6() {
             </article>
           </div>
 
-          {/* FIXED: .machine is now in normal flow — no escaping its grid column */}
           <div className="machine">
-            <img src={machinery} alt="LohiaCorp machinery" loading="lazy" decoding="async" />
+            <img src={machinery} alt="LohiaCorp modern machinery" loading="lazy" decoding="async" />
           </div>
         </section>
-      </main>
+      </div>
     </div>
   )
 }

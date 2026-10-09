@@ -97,62 +97,65 @@ function App() {
 
   return (
     <div className="annual-app continuous-scroll">
+      <a href="#main-content" className="skip-to-content">
+        Skip to main content
+      </a>
       <FloatingLogo activeSection={activeSection} />
       <Navbar />
 
-      {/* Main Content */}
-      <main className="annual-report">
-        <section id="cover" className="report-section">
+      {/* Main Landmark Content */}
+      <main id="main-content" className="annual-report" tabIndex="-1">
+        <section id="cover" className="report-section" aria-label="Cover page">
           <Pg1 />
         </section>
-        <section id="highlights" className="report-section">
+        <section id="highlights" className="report-section" aria-label="Theme introduction and financial highlights">
           <Pg2 />
         </section>
-        <section id="about" className="report-section">
+        <section id="about" className="report-section" aria-label="About Lohia Corp and corporate overview">
           <div id="vision" style={{ position: 'absolute', top: 0, left: 0 }} aria-hidden="true" />
           <Pg3 />
         </section>
-        <section id="journey" className="report-section">
+        <section id="journey" className="report-section" aria-label="Our 40-year journey and milestones">
           <Pg4 />
         </section>
-        <section id="portfolio" className="report-section">
+        <section id="portfolio" className="report-section" aria-label="Product portfolio and machinery">
           <div id="machinery" style={{ position: 'absolute', top: 0, left: 0 }} aria-hidden="true" />
           <Pg5 />
         </section>
-        <section id="applications" className="report-section">
+        <section id="applications" className="report-section" aria-label="Product applications across industries">
           <Pg6 />
         </section>
-        <section id="geography" className="report-section">
+        <section id="geography" className="report-section" aria-label="Geographical presence and global reach">
           <Pg7 />
         </section>
-        <section id="chairmans-desk" className="report-section">
+        <section id="chairmans-desk" className="report-section" aria-label="Corporate values and governance">
           <Pg8 />
         </section>
-        <section id="pg9" className="report-section">
+        <section id="pg9" className="report-section" aria-label="From the Chairman and Managing Director's desk">
           <Pg9 />
         </section>
-        <section id="leaders" className="report-section">
+        <section id="leaders" className="report-section" aria-label="Our visionary leaders and board of directors">
           <Pg10 />
         </section>
-        <section id="ttrc" className="report-section">
+        <section id="ttrc" className="report-section" aria-label="Technical Training and Research Centre">
           <Pg11 />
         </section>
-        <section id="rnd" className="report-section">
+        <section id="rnd" className="report-section" aria-label="Research and Development capabilities">
           <Pg12 />
         </section>
-        <section id="technology-customer" className="report-section">
+        <section id="technology-customer" className="report-section" aria-label="Technology and digital innovation">
           <Pg13 />
         </section>
-        <section id="pg14" className="report-section">
+        <section id="pg14" className="report-section" aria-label="Customer support and genuine spare parts">
           <Pg14 />
         </section>
-        <section id="esg-communities" className="report-section">
+        <section id="esg-communities" className="report-section" aria-label="Sustainable growth through responsible practices">
           <Pg15 />
         </section>
-        <section id="pg16" className="report-section">
+        <section id="pg16" className="report-section" aria-label="Environmental, social, and governance initiatives">
           <Pg16 />
         </section>
-        <section id="pg17" className="report-section">
+        <section id="pg17" className="report-section" aria-label="Community care and stakeholder engagement">
           <Pg17 />
         </section>
       </main>
